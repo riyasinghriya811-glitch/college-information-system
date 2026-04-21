@@ -1,0 +1,36 @@
+01
+Private Sub cmdlogin_Click()
+02
+ 
+03
+ 
+04
+If txtuname.Text = "" And txtpword.Text = "" Then
+05
+MsgBox "No Username/ Password Entered!", vbOKOnly + vbCritical, "LOGIN ERROR"
+06
+FRMLOGIN.Show
+07
+ 
+08
+ElseIf txtuname.Text = dtasign_in.Recordset.Fields("login_name") And txtpword.Text = dtasign_in.Recordset.Fields("login_pass") Then
+09
+MsgBox "Welcome!!!", vbOKOnly + vbInformation, "LOGIN SUCCESSFUL"
+10
+frmmain.Show
+11
+FRMLOGIN.Hide
+12
+ 
+13
+Else
+14
+MsgBox "Try again! Username/ Password is Incorrect!", vbOKOnly + vbCritical, "LOGIN ERROR"
+15
+FRMLOGIN.Show
+16
+End If
+17
+ 
+18
+End Sub
